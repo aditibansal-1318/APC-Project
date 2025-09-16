@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Hospital Management System</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- Patient -->
+    <h2>👩‍⚕️ Add Patient</h2>
+    <form onsubmit="addPatient(event)">
+      <label>Name:</label>
+      <input type="text" id="patientName" required>
+      <label>Age:</label>
+      <input type="number" id="patientAge" required>
+      <label>Disease:</label>
+      <input type="text" id="patientDisease" required>
+      <button type="submit">Add Patient</button>
+    </form>
+    <pre id="patientOutput"></pre>
+
+    <!-- Doctor -->
+    <h2>👨‍⚕️ Add Doctor</h2>
+    <form onsubmit="addDoctor(event)">
+      <label>Name:</label>
+      <input type="text" id="doctorName" required>
+      <label>Department:</label>
+      <input type="text" id="doctorDept" required>
+      <label>Specialization:</label>
+      <input type="text" id="doctorSpec" required>
+      <button type="submit">Add Doctor</button>
+    </form>
+    <pre id="doctorOutput"></pre>
+
+    <!-- Appointment -->
+    <h2>📅 Book Appointment</h2>
+    <form onsubmit="bookAppointment(event)">
+      <label>Patient ID:</label>
+      <input type="text" id="apptPatientId" required>
+      <label>Doctor ID:</label>
+      <input type="text" id="apptDoctorId" required>
+      <label>Date:</label>
+      <input type="date" id="apptDate" required>
+      <label>Time:</label>
+      <input type="time" id="apptTime" required>
+      <button type="submit">Book Appointment</button>
+    </form>
+    <pre id="apptOutput"></pre>
+
+    <!-- Department -->
+    <h2>🏢 Add Department</h2>
+    <form onsubmit="addDepartment(event)">
+      <label>Name:</label>
+      <input type="text" id="deptName" required>
+      <button type="submit">Add Department</button>
+    </form>
+    <pre id="deptOutput"></pre>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
